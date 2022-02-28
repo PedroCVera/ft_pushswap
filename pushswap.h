@@ -53,10 +53,12 @@ t_chun	*ft_chun(int *arr, int opt, int ac);
 void	pushchunk(t_list **stack_a, t_list **stack_b, t_chun *arr, int opt);
 //void	bigboys(t_list **stack_a, t_list **stack_b, t_chun *arr, int opt);
 void	algo(t_list **stack_a, t_list **stack_b, t_chun *arr, int opt);
-void	AtoBgeral(t_list **stack_a, t_list **stack_b, t_chun *arr);
-void	AtoB100(t_list **a, t_list **b, t_chun *arr, int opt);
+void	atobgeral(t_list **stack_a, t_list **stack_b);
+void	atob100(t_list **a, t_list **b, t_chun *arr, int opt);
 int		ft_findbig(t_list *stack);
-void	AtoBgeralBA(t_list **stack_a, t_list **stack_b, t_chun *arr);
-void	AtoB500(t_list **stack_a, t_list **stack_b, t_chun *arr, int opt);
+void	atobgeral21(t_list **stack_a, t_list **stack_b);
+void	atob500(t_list **stack_a, t_list **stack_b, t_chun *arr, int opt);
+t_index	*create_chun500(int opt);
+int		help500(t_list **a, t_list **b, t_chun *r, t_index *i);
 
 #endif

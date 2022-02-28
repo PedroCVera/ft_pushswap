@@ -36,7 +36,7 @@ int	ft_findbig(t_list *stack)
 	return (counter);
 }
 
-void	AtoBgeralBA(t_list **stack_a, t_list **stack_b, t_chun *arr)
+void	atobgeral21(t_list **stack_a, t_list **stack_b)
 {
 	int	counter;
 
@@ -60,18 +60,18 @@ void	AtoBgeralBA(t_list **stack_a, t_list **stack_b, t_chun *arr)
 				counter--;
 			}
 		}
-	push(stack_b, stack_a, 2);
+		push(stack_b, stack_a, 2);
 	}
 }
 
-void	AtoBgeralAB(t_list **stack_a, t_list **stack_b)
+void	atobgeral12(t_list **stack_a, t_list **stack_b)
 {
 	while (ft_lstsize(*stack_a) != 0)
 		push(stack_a, stack_b, 1);
 }
 
-void	AtoBgeral(t_list **stack_a, t_list **stack_b, t_chun *arr)
+void	atobgeral(t_list **stack_a, t_list **stack_b)
 {
-	AtoBgeralAB(stack_a, stack_b);
-	AtoBgeralBA(stack_a, stack_b, arr);
+	atobgeral12(stack_a, stack_b);
+	atobgeral21(stack_a, stack_b);
 }

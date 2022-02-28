@@ -12,7 +12,6 @@
 
 #include "pushswap.h"
 
-//TIRA ESTA MERDA
 /*void	ft_lstview(t_list *stack_a, t_list *stack_b)
 {
 	write(1, "stack_a\n", 8);
@@ -63,7 +62,7 @@ int	*create_arr(int ac, char *av[])
 	ind = 0;
 	arr = (int *)malloc(ac * sizeof(int));
 	if (!arr)
-		return 0;
+		return (0);
 	while (ind < ac - 1)
 	{
 		arr[ind] = ft_atoi(av[ind + 1]);
@@ -102,8 +101,5 @@ int	main(int ac, char *av[])
 	put_in_stack(&stack_a, av, ac);
 	arr = create_arr(ac, av);
 	sorting(&stack_a, &stack_b, ac, arr);
-/*	ft_lstview(stack_a, stack_b);
-	if (checker(stack_a) == true)
-		write(1, "Sorted\n", 7);*/
 	return (0);
 }

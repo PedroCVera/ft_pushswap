@@ -33,8 +33,31 @@ void	ab100(t_list **a, t_list **b, t_chun *arr)
 		num_chan(a, b, arr);
 }
 
-void	AtoB100(t_list **a, t_list **b, t_chun *arr, int opt)
+void	c4hun(t_list **a, t_list **b, t_chun *arr)
 {
-	ab100(a, b, arr);
-	AtoBgeralBA(a, b, arr);
+	int		ss;
+	t_index	*ind;
+
+	ind = create_chun500(1);
+	ind[0].x1 = 1;
+	ind[0].x2 = 2;
+	while (ft_lstsize(*a) != 0)
+	{
+		ss = arr[ind[0].x1].imax - arr[ind[0].x1].imin;
+		ss = ss + (arr[ind[0].x2].imax - arr[ind[0].x2].imin) + 1;
+		while (ss >= 0)
+		{
+			if (help500(a, b, arr, ind) == 1)
+				ss--;
+		}
+		ind[0].x1 = ind[0].x1 - 1;
+		ind[0].x2 = ind[0].x2 + 1;
+	}
+}
+
+void	atob100(t_list **a, t_list **b, t_chun *arr, int opt)
+{
+	c4hun(a, b, arr);
+	opt = 4;
+	atobgeral21(a, b);
 }

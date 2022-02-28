@@ -19,7 +19,6 @@
 # include <unistd.h>
 # include <stdbool.h>
 # include <ctype.h>
-# include "../pushswap.h"
 
 typedef struct s_list
 {

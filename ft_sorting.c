@@ -18,12 +18,12 @@ void	ft_sortingbig(t_list **stack_a, t_list **stack_b, int ac, int *arr)
 
 	if (ac == 501)
 	{
-		array = ft_chun(arr, 5, ac);
-		algo(stack_a, stack_b, array, 5);
+		array = ft_chun(arr, 10, ac);
+		algo(stack_a, stack_b, array, 10);
 	}
 	else if (ac == 101)
 	{
-		array = ft_chun(arr, 2, ac);
+		array = ft_chun(arr, 4, ac);
 		algo(stack_a, stack_b, array, 2);
 	}
 	else
@@ -31,15 +31,6 @@ void	ft_sortingbig(t_list **stack_a, t_list **stack_b, int ac, int *arr)
 		array = ft_chun(arr, 1, ac);
 		algo(stack_a, stack_b, array, 1);
 	}
-	/*
-	//TIRA ISTO PLS
-	int	ind = 0;
-	while (ind < 4)
-	{
-		printf("\n\nInd:%d\nMax:%d\nMin:%d\n\n", ind, array[ind].max, array[ind].min);
-		ind++;
-	}
-	// ^^^^^^^^^^^^^^*/
 }
 
 void	sorting(t_list **stack_a, t_list **stack_b, int ac, int *arr)

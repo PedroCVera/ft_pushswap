@@ -12,6 +12,9 @@
 
 #include "pushswap.h"
 
+#define MAXINT 2147483647
+#define MININT -2147483648
+
 int	ft_ispace(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n')
@@ -25,11 +28,7 @@ bool	ft_errorsatoi(const char *str)
 {
 	int		sign;
 	long	r;
-	long	maxint;
-	long	minint;
 
-	minint = -2147483648;
-	maxint = 2147483647;
 	r = 0;
 	sign = 1;
 	while (ft_ispace(*str))
@@ -45,7 +44,8 @@ bool	ft_errorsatoi(const char *str)
 		r = r * 10 + *str - '0';
 		str++;
 	}
-	if (r < minint || r > maxint)
+	r = r * sign;
+	if (r < MININT || r > MAXINT)
 		return (false);
 	return (true);
 }

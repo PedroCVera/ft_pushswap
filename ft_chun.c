@@ -26,15 +26,23 @@ t_chun	*chun100(int *arr)
 {
 	t_chun	*array;
 
-	array = create_chun(2);
+	array = create_chun(4);
 	array[0].min = arr[0];
-	array[0].max = arr[49];
-	array[1].min = arr[50];
-	array[1].max = arr[99];
+	array[0].max = arr[24];
 	array[0].imin = 0;
-	array[0].imax = 49;
-	array[1].imin = 50;
-	array[1].imax = 99;
+	array[0].imax = 24;
+	array[1].min = arr[25];
+	array[1].max = arr[49];
+	array[1].imin = 25;
+	array[1].imax = 49;
+	array[2].min = arr[50];
+	array[2].max = arr[74];
+	array[2].imin = 50;
+	array[2].imax = 74;
+	array[3].min = arr[75];
+	array[3].max = arr[99];
+	array[3].imin = 75;
+	array[3].imax = 99;
 	return (array);
 }
 
@@ -45,19 +53,19 @@ t_chun	*chun500(int *arr)
 	int		jnd;
 	int		hnd;
 
-	hnd = 99;
+	hnd = 49;
 	jnd = 0;
-	array = create_chun(5);
+	array = create_chun(10);
 	ind = 0;
-	while (ind < 6)
+	while (ind < 11)
 	{
 		array[ind].min = arr[jnd];
 		array[ind].max = arr[hnd];
 		array[ind].imin = jnd;
 		array[ind].imax = hnd;
 		ind++;
-		jnd = jnd + 100;
-		hnd = hnd + 100;
+		jnd = jnd + 50;
+		hnd = hnd + 50;
 	}
 	return (array);
 }
@@ -78,9 +86,9 @@ t_chun	*ft_chun(int *arr, int opt, int ac)
 {
 	t_chun	*array;
 
-	if (opt == 2)
+	if (opt == 4)
 		array = chun100(arr);
-	else if (opt == 5)
+	else if (opt == 10)
 		array = chun500(arr);
 	else
 		array = chunchun(arr, ac);

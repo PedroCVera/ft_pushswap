@@ -17,10 +17,7 @@ bool	checker(t_list *stack_a)
 	t_list	*cursor;
 
 	if (!stack_a)
-	{
-		write(1, "\nNo stack_a\n", 12);
 		return (false);
-	}
 	cursor = stack_a;
 	while (cursor->next)
 	{
